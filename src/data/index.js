@@ -1,3 +1,3 @@
-const data = JSON.parse(localStorage.getItem('todoList')) || [];
+const data = [];
 
 export default data;

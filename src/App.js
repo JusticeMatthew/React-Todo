@@ -59,7 +59,7 @@ class App extends React.Component {
         <Header />
         <StyledContent>
           <h1>New.Too.Do</h1>
-          <TodoForm addTodo={this.addTodoHandler} />
+          <TodoForm tasks={this.state.tasks} addTodo={this.addTodoHandler} />
           <TodoList
             completionHandler={this.completionHandler}
             toggleHandler={this.toggleHandler}
