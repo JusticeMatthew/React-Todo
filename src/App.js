@@ -19,6 +19,14 @@ class App extends React.Component {
     };
   }
 
+  componentDidMount() {
+    this.setState({ tasks: JSON.parse(localStorage.getItem('list')) });
+  }
+
+  componentDidUpdate() {
+    localStorage.setItem('list', JSON.stringify(this.state.tasks));
+  }
+
   addTodoHandler = (todoName) => {
     const todo = {
       name: todoName,
